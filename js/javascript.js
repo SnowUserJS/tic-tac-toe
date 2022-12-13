@@ -24,9 +24,9 @@ buttonGame.addEventListener('click', function() {
         document.querySelector(".lot_result").innerHTML = lot_result;
         whoPlaysWhat();
     };
-        
-    startGame();
+	this.disabled = true;
     
+	startGame();
 });
 
 
@@ -131,9 +131,7 @@ function winVerification()  {
                 && clickOnCells[box[0]].innerHTML == nolik){
                     winerNolik();
                 }
-                
-
-                
+	    
     // for (let i of combinations) {
     //     console.log(clickOnCells[i[0]].innerHTML && clickOnCells[i[1]].innerHTML && clickOnCells[i[2]].innerHTML == krestik)
     // }
@@ -183,7 +181,6 @@ popDown.addEventListener('click', () => {
     incont.className = "pop_container down";
 
     setTimeout(restart, 200);
-
 })
 
 let restart = function() {
